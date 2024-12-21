@@ -105,4 +105,8 @@ For a list of supported devices see the [OpenWrt Hardware Database](https://open
 
 ## License
 
+## Customization by Eric
+
+This repository has been customized by Eric to modify and adapt OpenWrt for use on the Router 3 Pro device. The modifications aim to enhance compatibility and functionality specific to this hardware.
+
 OpenWrt is licensed under GPL-2.0
