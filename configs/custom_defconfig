@@ -1,0 +1,5 @@
+make[2]: Entering directory '/home/eric/Desktop/customize_openwrt/openwrt/scripts/config'
+make[2]: 'conf' is up to date.
+make[2]: Leaving directory '/home/eric/Desktop/customize_openwrt/openwrt/scripts/config'
+ make[1] diffconfig
+ make[2] scripts/config/conf
