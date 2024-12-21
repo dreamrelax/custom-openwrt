@@ -4,7 +4,7 @@
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
 # Define the local directory and the remote GitHub repository URL
-LOCAL_DIR="$SCRIPT_DIR/openwrt/build_dir/target-mipsel_24kc_musl/hostapd-wpad-full-mbedtls/hostapd-main"
+LOCAL_DIR="$SCRIPT_DIR/build_dir/target-mipsel_24kc_musl/hostapd-wpad-full-mbedtls/hostapd-main"
 REMOTE_REPO="https://github.com/dreamrelax/custom-hostapd.git"
 REMOTE_BRANCH="main"
 
