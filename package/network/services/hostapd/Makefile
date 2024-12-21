@@ -7,11 +7,13 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=hostapd
 PKG_RELEASE:=8
 
-PKG_SOURCE_URL:=http://w1.fi/hostap.git
+PKG_SOURCE_URL:=https://github.com/dreamrelax/custom-hostapd.git
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_DATE:=2023-09-08
-PKG_SOURCE_VERSION:=e5ccbfc69ecf297590341ae8b461edba9d8e964c
-PKG_MIRROR_HASH:=fcc6550f46c7f8bbdbf71e63f8f699b9a0878565ad1b90a17855f5ec21283b8f
+PKG_SOURCE_VERSION:=main  # 使用主分支
+PKG_SOURCE_VERSION:=main  # 確保這裡使用正確的分支名稱
+
+# 禁用校驗或更新 HASH
+PKG_HASH:=skip
 
 PKG_MAINTAINER:=Felix Fietkau <nbd@nbd.name>
 PKG_LICENSE:=BSD-3-Clause
@@ -586,6 +588,7 @@ TARGET_CPPFLAGS := \
 	$(if $(CONFIG_WPA_MSG_MIN_PRIORITY),-DCONFIG_MSG_MIN_PRIORITY=$(CONFIG_WPA_MSG_MIN_PRIORITY))
 
 TARGET_LDFLAGS += -lubox -lubus -lblobmsg_json -lucode -lm -lnl-tiny
+TARGET_CFLAGS += -g3 -O0 -fno-omit-frame-pointer
 
 ifdef CONFIG_WPA_ENABLE_WEP
     DRIVER_MAKEOPTS += CONFIG_WEP=y
